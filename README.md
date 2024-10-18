@@ -31,11 +31,8 @@ pip install -r requirements.txt
 ## Reproduce Results
 We provide the source code to reproduce the results in our paper. The results of DSGC can be reproduced by running main.py. 
 
-To train sythetic datasets:
+To train sythetic and real-world datasets:
 ```bash
 python main.py --N [node_number] --p [edge_probability] --K [cluster_number] --eta [flip_probability]
-```
-To train real-world datasets:
-```bash
 python main.py --dataset [sp1500/rainfall]
 ```
