@@ -41,3 +41,9 @@ To train real-world datasets:
 python main.py --dataset [dataset_name]
 ```
 Simple test on the signed stochastic block model SSBM(N=1000, p=0.01, K=5, eta=0.01). Dataset_name can be choosen from sp1500 and rainfall.
+
+### Current Authors
+If you have problems with the code please contact:
+xxx: ...@...
+xxx: ...@...
+
