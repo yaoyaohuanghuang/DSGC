@@ -78,10 +78,10 @@ class DSGC_Trainer(object):
 
         #-------------------------------------Density-based Augmentation------------------------------
         # hyperparameters: hop
-        self.A_p, self.A_p_power = get_powers_sparse(self.A_p_scipy,                                 hop=1, tau=self.args.tau)  # Adding positive edges along positive walks
-        self.A_n, self.A_n_power = get_powers_sparse_neg(self.A_n_scipy, self.A_p_scipy,             hop=1, tau=0)  # Adding negative edges along negative walks
-        self.A_pt, _ = get_powers_sparse(self.A_p_scipy.transpose(),                                 hop=1, tau=self.args.tau)  # Adding positive edges along positive walks
-        self.A_nt, _ = get_powers_sparse_neg(self.A_n_scipy.transpose(), self.A_p_scipy.transpose(), hop=1, tau=0) # Adding negative edges along negative walks
+        self.A_p, self.A_p_power = get_powers_sparse(self.A_p_scipy,                                 hop=args.m_p, tau=self.args.tau)  # default:1. Adding positive edges along positive walks
+        self.A_n, self.A_n_power = get_powers_sparse_neg(self.A_n_scipy, self.A_p_scipy,             hop=args.m_n, tau=0)  # default:1. Adding negative edges along negative walks
+        self.A_pt, _ = get_powers_sparse(self.A_p_scipy.transpose(),                                 hop=args.m_p, tau=self.args.tau)  # default:1. Adding positive edges along positive walks
+        self.A_nt, _ = get_powers_sparse_neg(self.A_n_scipy.transpose(), self.A_p_scipy.transpose(), hop=args.m_n, tau=0) # default:1. Adding negative edges along negative walks. In general, m_p is set to m_n.
 
         self.A_p = self.A_p.to(self.args.device)
         self.A_n = self.A_n.to(self.args.device)
