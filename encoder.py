@@ -144,14 +144,13 @@ class DSGC(nn.Module):
             an additive bias. (default: :obj:`True`)
     """
 
-    def __init__(self, nfeat: int, hidden: int, nclass: int, dropout: float, hop: int, div_alpha: float,
+    def __init__(self, nfeat: int, hidden: int, nclass: int, dropout: float, hop: int,
                  directed: bool = False,
                  bias: bool = True):
         super(DSGC, self).__init__()
         print('nfeat:', nfeat, 'hidden:', hidden, 'hop:', hop) # 5, 32, 2
         nh1 = hidden
         nh2 = hidden
-        self.div_alpha = div_alpha
         self._num_clusters = int(nclass)
         self._CONVOL = CONVOL(hop, directed)
         self.kmeans = KMeans(n_clusters=self._num_clusters, n_init=20)
