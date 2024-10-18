@@ -72,7 +72,7 @@ class DSGC_Trainer(object):
         #-------------------------------------Violation Sign-Refine-------------------------------------
         aa = 1
         if args.eta >= 0 and aa == -1:
-            A_P, A_N = VSR(self.A_p_scipy, self.A_n_scipy, label=label)
+            A_P, A_N = VSR(self.A_p_scipy, self.A_n_scipy, args.delta_p, args.delta_n)
             self.A_p_scipy = sp.csc_matrix(A_P)
             self.A_n_scipy = sp.csc_matrix(A_N)
 
