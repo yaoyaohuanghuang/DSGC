@@ -152,7 +152,6 @@ class DSGC_Trainer(object):
                                 nclass=self.num_clusters,
                                 dropout=self.args.dropout,
                                 hop=self.args.hop,
-                                div_alpha=self.args.div_alpha,
                                 directed=self.args.directed).to(self.args.device)
 
             model = graphmodel
