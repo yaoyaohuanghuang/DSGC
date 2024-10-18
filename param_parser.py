@@ -61,10 +61,10 @@ def parameter_parser():
     parser.add_argument('--delta_n', type=int, default=1,  
                         help='the negative threshold of select noisy negative edges in VS-R.')
 
-    parser.add_argument('--m_p', type=int, default=2,  # 2
+    parser.add_argument('--m_p', type=int, default=4,  # 2
                         help='the power (m_p hop positive reachable) for adding positive edges in Density-based Augmentation.') 
-    parser.add_argument('--m_n', type=int, default=2,  # 2
-                        help='the power (m_n hop negative reachable) for adding negatve edges in Density-based Augmentation.')
+    parser.add_argument('--m_n', type=int, default=4,  # 2
+                        help='the power (m_n hop negative reachable) for adding negatve edges in Density-based Augmentation. Eta is larger, m_p and m_n are smaller. ')
     
     parser.add_argument('--eta', type=float, default=0,  # 0.1
                         help='direction noise level in the meta-graph adjacency matrix, less than 0.5.')
