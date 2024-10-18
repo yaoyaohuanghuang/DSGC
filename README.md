@@ -8,8 +8,8 @@ We have tested our code on Python 3.6.13 with PyTorch 1.10.0, PyG 1.8.1 and CUDA
 
 Clone the repository:
 ```bash
-git clone https://github.com/Graph-COM/GSAT.git
-cd GSAT
+git clone https://github.com/yaoyaohuanghuang/DSGC.git
+cd DSGC
 ```
 
 
