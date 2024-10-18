@@ -561,7 +561,7 @@ def spectral_adjacency_reg(A_p, A_n, k=2, normalisation='none', tau_p=None, tau_
     v = v * w  # weight eigenvalues by eigenvectors, since larger eigenvectors are more likely to be informative
     return v
 
-def VSR(A_p, A_n, label):
+def VSR(A_p, A_n, delta_p, delta_n):
 
     A_power_coo_1 = A_p - A_n # -5300
 
@@ -577,8 +577,8 @@ def VSR(A_p, A_n, label):
     print(A_new_coo_p.max(), A_new_coo_p.min())
 
 
-    # A_p[A_new_coo_p > 1] = 1  # 16; 14; 9;8;5--2
-    A_n[A_new_coo_p < -2] = 1  # 39,38,37,36,33,
+    # A_p[A_new_coo_p > delta_p] = 1  # 16; 14; 9;8;5--2
+    A_n[A_new_coo_p < - delta_n] = 1  # 39,38,37,36,33,
 
     return A_p, A_n
 
