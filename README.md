@@ -40,7 +40,7 @@ To train unlabeled datasets:
 ```bash
 python main.py --dataset [dataset_name]
 ```
-pos. threshold is the positive threshold for select noisy positive edges, and neg. threshold is the negative threshold for select noisy negative edges. Positive edges are added between two reachable nodes along m_p positive walks. Negative edges are added between two reachable nodes along m_p negative walks. Simple test on the signed stochastic block model SSBM (N=1000, p=0.01, K=5, eta=0.01). Dataset_name can be choosen from sp1500 and rainfall.
+The pos. threshold is the positive threshold for select noisy positive edges, and neg. threshold is the negative threshold for select noisy negative edges. Positive edges are added between two reachable nodes along m_p positive walks. Negative edges are added between two reachable nodes along m_p negative walks. Simple test on the signed stochastic block model SSBM (N=1000, p=0.01, K=5, eta=0.01). Dataset_name can be choosen from sp1500 and rainfall.
 
 ### Current Authors
 If you have problems with the code please contact:
