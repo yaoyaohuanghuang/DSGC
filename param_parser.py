@@ -56,6 +56,16 @@ def parameter_parser():
                         help=' number of blocks in each SSBM.')
     parser.add_argument('--p', type=float, default=0.01,  # 0.02
                         help='probability of the existence of a link within communities, with probability (1-p), we have 0.')
+    parser.add_argument('--delta_p', type=int, default=1,  
+                        help='the positive threshold to select noisy positive edges in VS-R.') 
+    parser.add_argument('--delta_n', type=int, default=1,  
+                        help='the negative threshold of select noisy negative edges in VS-R.')
+
+    parser.add_argument('--m_p', type=int, default=2,  # 2
+                        help='the power (m_p hop positive reachable) for adding positive edges in Density-based Augmentation.') 
+    parser.add_argument('--m_n', type=int, default=2,  # 2
+                        help='the power (m_n hop negative reachable) for adding negatve edges in Density-based Augmentation.')
+    
     parser.add_argument('--eta', type=float, default=0,  # 0.1
                         help='direction noise level in the meta-graph adjacency matrix, less than 0.5.')
     parser.add_argument('--pbnc_loss', type=float, default=1,
