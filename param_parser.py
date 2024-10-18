@@ -59,7 +59,7 @@ def parameter_parser():
     parser.add_argument('--delta_p', type=int, default=1,  
                         help='the positive threshold to select noisy positive edges in VS-R.') 
     parser.add_argument('--delta_n', type=int, default=1,  
-                        help='the negative threshold of select noisy negative edges in VS-R.')
+                        help='the negative threshold of select noisy negative edges in VS-R. The size of datasets is larger, delta_p and delta_n can be increased slightly.')
 
     parser.add_argument('--m_p', type=int, default=4,  # 2
                         help='the power (m_p hop positive reachable) for adding positive edges in Density-based Augmentation.') 
