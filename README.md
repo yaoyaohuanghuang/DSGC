@@ -34,13 +34,13 @@ We provide the source code to reproduce the results in our paper. The results of
 
 To train sythetic datasets:
 ```bash
-python main.py --N [node_number] --p [edge_probability] --K [cluster_number] --eta [flip_probability]
+python main.py --N [node_number] --p [edge_probability] --K [cluster_number] --eta [flip_probability] --delta_p [pos. threshold] --delta_n [neg. threshold] --m_p [add pos. edges] --m_n [add neg. edges]
 ```
 To train real-world datasets:
 ```bash
 python main.py --dataset [dataset_name]
 ```
-Simple test on the signed stochastic block model SSBM(N=1000, p=0.01, K=5, eta=0.01). Dataset_name can be choosen from sp1500 and rainfall.
+pos. threshold is the positive threshold for select noisy positive edges, and neg. threshold is the negative threshold for select noisy negative edges. Positive edges are added between two reachable nodes along m_p positive walks. Negative edges are added between two reachable nodes along m_p negative walks. Simple test on the signed stochastic block model SSBM (N=1000, p=0.01, K=5, eta=0.01). Dataset_name can be choosen from sp1500 and rainfall.
 
 ### Current Authors
 If you have problems with the code please contact:
