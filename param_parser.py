@@ -58,7 +58,6 @@ def parameter_parser():
                         help='probability of the existence of a link within communities, with probability (1-p), we have 0.')
     parser.add_argument('--eta', type=float, default=0,  # 0.1
                         help='direction noise level in the meta-graph adjacency matrix, less than 0.5.')
-    parser.add_argument('--div_alpha', type=float, default=0.01, help='diversity term in NSVGD.')
     parser.add_argument('--pbnc_loss', type=float, default=1,
                         help='Ratio of pbnc loss to reconstruction loss in total loss. Default 0.1.')
 
