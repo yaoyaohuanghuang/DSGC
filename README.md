@@ -39,4 +39,4 @@ To train real-world datasets:
 ```bash
 python main.py --dataset [dataset_name]
 ```
-dataset_name can be choosen as sp1500 and rainfall.
+Simple test on the signed stochastic block model SSBM(N=1000, p=0.01, K=5, eta=0.01). Dataset_name can be choosen from sp1500 and rainfall.
