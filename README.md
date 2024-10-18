@@ -44,6 +44,7 @@ Simple test on the signed stochastic block model SSBM(N=1000, p=0.01, K=5, eta=0
 
 ### Current Authors
 If you have problems with the code please contact:
+```bash
 xxx: ...@...
 xxx: ...@...
-
+```
