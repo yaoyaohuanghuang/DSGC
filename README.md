@@ -1,4 +1,5 @@
 # Robust Deep Signed Graph Clustering via Weak Balance Theory
+This repository contains the official implementation of DSGC as described in this paper sumitted WWW-2025. Paper ID:
 **Overview of DSGC:** **D**eep **S**igned **G**raph **C**lustering
 
 ![image](https://github.com/yaoyaohuanghuang/DSGC/blob/main/IMG/framework_www.jpg)
